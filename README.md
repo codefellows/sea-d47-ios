@@ -1,5 +1,6 @@
 sea-d47-ios
 ===========
 
-[Week 1](week-1/)
+## links to weekly directorys
+* [Week 1 - Twitter Clone ](week-1/)
 
