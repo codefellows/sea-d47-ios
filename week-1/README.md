@@ -16,6 +16,7 @@ Week 1 - Twitter Clone
 * Use a ranged switch statement to make sure the status code of the response is good
 * Reload the table view on the main thread (aka main queue) once you are done parsing the JSON data from the response
 * Show the downloaded tweets on your table view
+
 # Wednesday - oct-28
 [oct-28-twitter-clone](oct-28-twitter-clone)
 * Setup your cells with autolayout so you can see the entire tweets text. If you get any .... at the end that is probably twitters API being stupid
