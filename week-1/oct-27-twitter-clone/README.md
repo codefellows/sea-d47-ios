@@ -1,6 +1,11 @@
 Tuesday Oct 27
 ==============
 
+# Readings
+* [ACAccounts Framework: working with the accounts store](https://developer.apple.com/library/prerelease/mac/documentation/Accounts/Reference/ACAccountStoreClassRef/index.html#//apple_ref/occ/cl/ACAccountStore)
+* [Social Framework: accessing social network services](https://developer.apple.com/library/prerelease/ios/documentation/Social/Reference/Social_Framework/index.html#//apple_ref/doc/uid/TP40012233)
+* [Social Framework: describes URL Request to post a Social networking Service](https://developer.apple.com/library/prerelease/ios/documentation/Social/Reference/SLRequest_Class/index.html#//apple_ref/occ/cl/SLRequest)
+
 # Lecture Slides
 * Closures
 * Accounts & Social Frameworks
