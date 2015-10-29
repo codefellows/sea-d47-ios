@@ -10,8 +10,6 @@ import Foundation
 import Accounts
 
 class LoginService {
-    
-
     class func loginTwitter(completionHandler: (String?, ACAccount?) -> ()) {
         
         // Set up Account Store

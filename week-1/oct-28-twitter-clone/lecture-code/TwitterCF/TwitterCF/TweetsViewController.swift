@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Accounts
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,48 +20,35 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
+        self.setupTableView()
         self.getAccount()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: Week 2 Class + Homework.
-    
-    func loginHandler(error: String?, account:ACAccount? ) -> (){
-        if let error = error {
-            print(error)
-            return
-        }
-        
-        if let account = account {
-            TwitterService.sharedService.account = account
-            self.authenticateUser()
-        }
-
-    }
-    
-    
-    
-    
     func getAccount() {
-        LoginService.loginTwitter(loginHandler)
+        LoginService.loginTwitter({ (error, account) -> () in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let account = account {
+                TwitterService.sharedService.account = account
+                self.authenticateUser()
+            }
+        })
     }
-    
-//    func getAccount() {
-//        LoginService.loginTwitter({ (error, account) -> () in
-//            if let error = error {
-//                print(error)
-//                return
-//            }
-//            
-//            if let account = account {
-//                TwitterService.sharedService.account = account
-//                self.authenticateUser()
-//            }
-//        })
-//    }
     
     func authenticateUser(){
         TwitterService.getAuthUser { (error, user) -> () in
@@ -94,6 +80,23 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    // MARK: Week 3 Class
+    
+    func setupTableView() {
+        self.tableView.estimatedRowHeight = 10.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == TweetDetailViewController.indentifier() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let tweet = self.tweets[indexPath.row]
+                let tweetsDetailViewController = segue.destinationViewController as! TweetDetailViewController
+                tweetsDetailViewController.tweet = tweet
+            }
+        }
+    }
+    
     // MARK: UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,6 +109,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let tweet = tweets[indexPath.row]
         
         cell.textLabel?.text = tweet.text
+        cell.textLabel?.numberOfLines = 0
         
         if let user = tweet.user {
             cell.detailTextLabel?.text = "Posted by: \(user.name)"
