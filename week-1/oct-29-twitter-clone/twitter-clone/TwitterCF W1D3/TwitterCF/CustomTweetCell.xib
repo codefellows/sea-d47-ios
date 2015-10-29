@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="UQF-oz-00j" customClass="CustomTweetTableViewCell" customModule="TwitterCF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="576" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UQF-oz-00j" id="LAt-xb-XnX">
+                <rect key="frame" x="0.0" y="0.0" width="576" height="137"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-Lc-oJ1">
+                        <rect key="frame" x="8" y="108" width="560" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZo-1d-UX0">
+                        <rect key="frame" x="8" y="8" width="560" height="92"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="92" id="BxR-yX-mYd"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="RZo-1d-UX0" firstAttribute="top" secondItem="LAt-xb-XnX" secondAttribute="top" constant="8" id="GrR-ES-F2h"/>
+                    <constraint firstAttribute="bottom" secondItem="tnq-Lc-oJ1" secondAttribute="bottom" constant="8" id="HSh-PY-F8S"/>
+                    <constraint firstAttribute="trailing" secondItem="RZo-1d-UX0" secondAttribute="trailing" constant="8" id="LOL-Vb-Q3J"/>
+                    <constraint firstItem="RZo-1d-UX0" firstAttribute="leading" secondItem="LAt-xb-XnX" secondAttribute="leading" constant="8" id="Q6j-fV-LnZ"/>
+                    <constraint firstAttribute="trailing" secondItem="tnq-Lc-oJ1" secondAttribute="trailing" constant="8" id="VLC-lp-ZYZ"/>
+                    <constraint firstItem="tnq-Lc-oJ1" firstAttribute="leading" secondItem="LAt-xb-XnX" secondAttribute="leading" constant="8" id="mHE-9V-sm8"/>
+                    <constraint firstItem="tnq-Lc-oJ1" firstAttribute="top" secondItem="RZo-1d-UX0" secondAttribute="bottom" constant="8" id="wSy-wx-6HV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="imgView" destination="RZo-1d-UX0" id="4EW-bC-sEL"/>
+                <outlet property="tweetTextLabel" destination="tnq-Lc-oJ1" id="bPG-cI-Wer"/>
+            </connections>
+            <point key="canvasLocation" x="481" y="420"/>
+        </tableViewCell>
+    </objects>
+</document>
