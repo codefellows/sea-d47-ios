@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9058" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2E-AJ-JyU">
+                                <rect key="frame" x="224" y="309" width="153" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Bring Up Image Picker"/>
+                                <connections>
+                                    <action selector="bringupImagePickerButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uk-gS-h1Y"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D7N-VL-RQH">
+                                <rect key="frame" x="180" y="52" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="JHe-cr-7aC"/>
+                                    <constraint firstAttribute="height" constant="240" id="ULx-rV-eTE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvE-1J-jBm">
+                                <rect key="frame" x="261" y="347" width="78" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilterButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDF-Fi-fQx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D7N-VL-RQH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="196-Bc-shc"/>
+                            <constraint firstItem="jvE-1J-jBm" firstAttribute="top" secondItem="A2E-AJ-JyU" secondAttribute="bottom" constant="8" id="53g-d1-c2f"/>
+                            <constraint firstItem="jvE-1J-jBm" firstAttribute="centerX" secondItem="A2E-AJ-JyU" secondAttribute="centerX" id="kc5-N9-bMB"/>
+                            <constraint firstItem="A2E-AJ-JyU" firstAttribute="top" secondItem="D7N-VL-RQH" secondAttribute="bottom" constant="17" id="rAu-hU-jUh"/>
+                            <constraint firstItem="D7N-VL-RQH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="w3Z-zC-gOu"/>
+                            <constraint firstItem="A2E-AJ-JyU" firstAttribute="centerX" secondItem="D7N-VL-RQH" secondAttribute="centerX" id="wvD-Lb-6Gx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="D7N-VL-RQH" id="BzK-nk-yvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="575"/>
+        </scene>
+    </scenes>
+</document>
