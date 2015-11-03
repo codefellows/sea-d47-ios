@@ -10,7 +10,7 @@ Week 2 - Sortagram
 * BONUS: post action in the action controller that successfully uploads the current imageview’s image up to your Parse backend.
 Code Challenge: Write a function that determines how many words there are in a sentence
 
-# [Monday - nov-3](nov-3-sortagram/)
+# [Tuesday - nov-3](nov-3-sortagram/)
 [nov-3-sortagram](nov-3-sortagram/)
 * Make sure you resize the image to something more suitable for a network upload before you post the image (600 * 600 should be okay) and populate imageView.
 * Create an action controller that has 3 - 4 different filters. This action controller should be presented by the tap of a button in the bottom center of the initial view controller.
