@@ -1,6 +1,6 @@
 Week 2 - Sortagram
 ==================
-# Monday - nov-2
+# [Monday - nov-2](nov-2-sortagram/)
 [nov-2-sortagram](nov-2-sortagram/)
 
 * **SUPER IMPORTANT:** Download Parse's swift starter project and use it for your week 2 app. This comes with Parse's SDKs preinstalled. Here is the link:
