@@ -13,7 +13,8 @@ Tuesday Nov-3
 * Create an action controller that has 3 - 4 different filters. This action controller should be presented by the tap of a button in the bottom center of the initial view controller.
 * Create FilterService class to generate / give you available filters.
 * Create at least 3 different filter methods on your FilterService class  that filters the imageView’s image with the selected filter.
-* Bonus:
+
+# Bonus
  * Add two extra filters 
  * Build model object to house image and metadata to create Parse object when the user hits publish.
   * Make a Status Class
