@@ -20,3 +20,13 @@ Code Challenge: Write a function that determines how many words there are in a s
 * Bonus:
  * Add two extra filters 
  * Build model object to house image and metadata to create Parse object when the user hits publish.
+
+
+# [Wednesday - nov-4](nov-4-collection-view-demo/)
+[nov-4-collection-view-demo/](nov-4-collection-view-demo/)
+* Create a GalleryViewController with a collection view designed to show a bunch of photos.
+* Add a collection view to the interface.
+* Build a simple collection view layout.
+* Build a call to Parse to get all images uploaded yesterday and populate the collection view.
+* Use property observers to set collection view cell's imageviews, when downloaded (lazy load images)
+* Code Challenge: Write a function that computes the list of the first 100 Fibonacci numbers.
