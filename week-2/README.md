@@ -30,3 +30,12 @@ Code Challenge: Write a function that determines how many words there are in a s
 * Build a call to Parse to get all images uploaded yesterday and populate the collection view.
 * Use property observers to set collection view cell's imageviews, when downloaded (lazy load images)
 * Code Challenge: Write a function that computes the list of the first 100 Fibonacci numbers.
+
+# [Thursday- nov-5](nov-5-photo-framework/)
+[nov-5-photo-framework/](nov-5-photo-framework/)
+* Implement collection view on the HomeViewController to display all available filters already pre-applied on a thumbnail.
+* Show / Hide filter collection view in place of ActionSheetController.
+* Selecting a filtered thumbnail applies that filter to the current Image in the primary image view.
+* Add a pinch gesture recognizer to the GalleryViewController, which decreases/increases the item size upon pinching (use the scale property of the recognizer). Change layout interactively.
+* Create a custom protocol and delegate in order to communicate back image selection from GalleryViewController to the HomeViewControllerfor editing.
+
