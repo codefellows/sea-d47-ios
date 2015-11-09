@@ -38,12 +38,12 @@ class MBGithubOAuth {
 
     func oauthRequestWith(parameters: [String : String]) {
         var parametersString = String()
-        for parameter in parameters.values {
-            parametersString = parametersString.stringByAppendingString(parameter)
+        for (key, value) in parameters {
+            parametersString += "&\(key)=\(value)"
         }
         
         // URL constructor.
-        if let requestURL = NSURL(string: "\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)&scope=\(parametersString)") {
+        if let requestURL = NSURL(string: "\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)\(parametersString)") {
             UIApplication.sharedApplication().openURL(requestURL)
         }
     }
