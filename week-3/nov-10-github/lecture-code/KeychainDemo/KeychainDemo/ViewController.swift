@@ -11,12 +11,13 @@ import Security
 
 class ViewController: UIViewController {
   
+  let testToken = "987asd08f69086a0s8df09867092h398yv0982h9h98h29ghv09829g"
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-
+    KeychainService.save(testToken)
     
     let myToken = KeychainService.loadFromKeychain()
     print(myToken)
