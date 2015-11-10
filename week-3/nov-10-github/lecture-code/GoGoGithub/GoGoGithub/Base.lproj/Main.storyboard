@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="349"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="A1l-CZ-ysK">
+            <objects>
+                <viewController storyboardIdentifier="OAuthViewController" id="ZYO-hC-dbN" customClass="OAuthViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OeF-N4-EMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="wer-Q9-Qsf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hun-Mq-qUp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Tv-zl-YD0">
+                                <rect key="frame" x="180" y="225" width="240" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Qa7-4Y-uA0"/>
+                                    <constraint firstAttribute="height" constant="150" id="y6c-CT-M5y"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYX-Od-04T">
+                                <rect key="frame" x="181" y="359" width="240" height="241"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwt-6e-k7d">
+                                        <rect key="frame" x="8" y="101" width="224" height="40"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.61568627450980395" green="0.85882352941176465" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NhC-Pq-cNl"/>
+                                        </constraints>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonSelected:" destination="ZYO-hC-dbN" eventType="touchUpInside" id="0v5-2R-u5g"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Nrc-qa-utc">
+                                        <rect key="frame" x="204" y="111" width="20" height="20"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jwt-6e-k7d" firstAttribute="centerX" secondItem="GYX-Od-04T" secondAttribute="centerX" id="7H8-b5-XuS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nrc-qa-utc" secondAttribute="trailing" constant="16" id="ArF-B8-U0y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jwt-6e-k7d" secondAttribute="trailing" constant="8" id="BKu-eT-8Em"/>
+                                    <constraint firstItem="Nrc-qa-utc" firstAttribute="centerY" secondItem="Jwt-6e-k7d" secondAttribute="centerY" id="Mu7-r9-yiD"/>
+                                    <constraint firstItem="Jwt-6e-k7d" firstAttribute="leading" secondItem="GYX-Od-04T" secondAttribute="leading" constant="8" id="OsE-zt-dtB"/>
+                                    <constraint firstItem="Jwt-6e-k7d" firstAttribute="centerY" secondItem="GYX-Od-04T" secondAttribute="centerY" id="ntM-Xl-0P2"/>
+                                    <constraint firstAttribute="width" constant="240" id="wjE-yx-fhC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GYX-Od-04T" firstAttribute="centerX" secondItem="3Tv-zl-YD0" secondAttribute="centerX" id="SuY-dr-G4C"/>
+                            <constraint firstItem="GYX-Od-04T" firstAttribute="top" secondItem="3Tv-zl-YD0" secondAttribute="bottom" constant="-16" id="iQh-KX-OdO"/>
+                            <constraint firstItem="3Tv-zl-YD0" firstAttribute="centerY" secondItem="hun-Mq-qUp" secondAttribute="centerY" id="ru2-Nw-ByW"/>
+                            <constraint firstItem="3Tv-zl-YD0" firstAttribute="centerX" secondItem="hun-Mq-qUp" secondAttribute="centerX" id="vQU-Gd-5C0"/>
+                            <constraint firstItem="wer-Q9-Qsf" firstAttribute="top" secondItem="GYX-Od-04T" secondAttribute="bottom" id="wM6-zY-K1H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Nrc-qa-utc" id="MP7-eP-3Wi"/>
+                        <outlet property="loginButton" destination="Jwt-6e-k7d" id="4ZB-C7-d3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvG-8l-5xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="349"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="github-logo" width="1500" height="1125"/>
+    </resources>
+</document>
