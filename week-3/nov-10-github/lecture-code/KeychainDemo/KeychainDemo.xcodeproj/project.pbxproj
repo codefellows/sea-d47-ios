@@ -14,7 +14,7 @@
 		64FEE2151BF1471400AF7219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FEE2131BF1471400AF7219 /* LaunchScreen.storyboard */; };
 		64FEE2201BF1471400AF7219 /* KeychainDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEE21F1BF1471400AF7219 /* KeychainDemoTests.swift */; };
 		64FEE22B1BF1471400AF7219 /* KeychainDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEE22A1BF1471400AF7219 /* KeychainDemoUITests.swift */; };
-		64FEE27B1BF1655200AF7219 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEE27A1BF1655200AF7219 /* KeychainService.swift */; settings = {ASSET_TAGS = (); }; };
+		64FEE27D1BF2B94600AF7219 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEE27C1BF2B94600AF7219 /* KeyChainService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		64FEE2261BF1471400AF7219 /* KeychainDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FEE22A1BF1471400AF7219 /* KeychainDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainDemoUITests.swift; sourceTree = "<group>"; };
 		64FEE22C1BF1471400AF7219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64FEE27A1BF1655200AF7219 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		64FEE27C1BF2B94600AF7219 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,9 @@
 			children = (
 				64FEE20A1BF1471300AF7219 /* AppDelegate.swift */,
 				64FEE20C1BF1471400AF7219 /* ViewController.swift */,
-				64FEE27A1BF1655200AF7219 /* KeychainService.swift */,
 				64FEE20E1BF1471400AF7219 /* Main.storyboard */,
 				64FEE2111BF1471400AF7219 /* Assets.xcassets */,
+				64FEE27C1BF2B94600AF7219 /* KeyChainService.swift */,
 				64FEE2131BF1471400AF7219 /* LaunchScreen.storyboard */,
 				64FEE2161BF1471400AF7219 /* Info.plist */,
 			);
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64FEE27B1BF1655200AF7219 /* KeychainService.swift in Sources */,
+				64FEE27D1BF2B94600AF7219 /* KeyChainService.swift in Sources */,
 				64FEE20D1BF1471400AF7219 /* ViewController.swift in Sources */,
 				64FEE20B1BF1471300AF7219 /* AppDelegate.swift in Sources */,
 			);
@@ -487,6 +487,7 @@
 				64FEE2311BF1471400AF7219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64FEE2321BF1471400AF7219 /* Build configuration list for PBXNativeTarget "KeychainDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				64FEE2341BF1471400AF7219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64FEE2351BF1471400AF7219 /* Build configuration list for PBXNativeTarget "KeychainDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				64FEE2371BF1471400AF7219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
