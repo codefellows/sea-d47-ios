@@ -18,15 +18,15 @@ let kSecMatchLimitOneValue = kSecMatchLimitOne as NSString
 class KeychainService: NSObject {
   
    class func save(data: NSString) {
-    var dataFromString: NSData = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+    let dataFromString: NSData = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
     
-    var keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecValueDataValue])
+    let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecValueDataValue])
     
     // Delete any existing items
     SecItemDelete(keychainQuery)
     
     // Add the new keychain item
-    var status: OSStatus = SecItemAdd(keychainQuery, nil)
+    let status: OSStatus = SecItemAdd(keychainQuery, nil)
   }
   
    class func loadFromKeychain() -> NSString? {
@@ -34,7 +34,7 @@ class KeychainService: NSObject {
     // Tell the query to return a result
     // Limit our results to one item
     
-    var keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, kCFBooleanTrue, kSecMatchLimitOneValue], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecReturnDataValue, kSecMatchLimitValue])
+    let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, kCFBooleanTrue, kSecMatchLimitOneValue], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecReturnDataValue, kSecMatchLimitValue])
     
     var dataTypeRef :AnyObject?
     
