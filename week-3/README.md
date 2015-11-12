@@ -14,3 +14,8 @@ Week 3 - Github Client
 * Create a model for repository, user and owner.
 * Create a HomeViewController and parse through the JSON returned from the server into models. No UI needed at this point, just print the information into the console.
 
+# [Wednesday - nov-11](nov-11-github/)
+### [nov-11-github](nov-11-github/)
+
+# [Thursday - nov-12](nov-12-github/)
+### [nov-12-github](nov-12-github/)
