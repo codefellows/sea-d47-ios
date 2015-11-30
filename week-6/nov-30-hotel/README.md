@@ -1,5 +1,14 @@
 Monday - nov 30 - Hotel Manager
 ===============
+# Lecture Slides 
+* Programmatic Layout
+* Relational Databases 
+* Intro to Core Data:
+ * Core Data Stack
+ * MOM
+ * NSManagedObjects
+ * The Context
+ * Basic Fetch
 
 # Home Work
 * Get your project setup in Objective-C
