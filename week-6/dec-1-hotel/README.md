@@ -1,6 +1,9 @@
 Tuesday - Dec 1 - Hotel Manager
 ===============
-# Lecture Slides(Coming Shortly) 
+# Lecture Slides 
+* UIDatePicker & UIPickerView
+* Date Handling
+* Advanced Fetching
 
 # Home Work
 * Seed your data base with the JSON payload provided
