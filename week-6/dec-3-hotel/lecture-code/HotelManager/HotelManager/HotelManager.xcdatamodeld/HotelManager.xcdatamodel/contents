@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Gues" representedClassName="Gues" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reservation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="guest" inverseEntity="Reservation" syncable="YES"/>
+    </entity>
+    <entity name="Hotel" representedClassName="Hotel" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stars" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="5" defaultValueString="0" syncable="YES"/>
+        <relationship name="rooms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" inverseName="hotel" inverseEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Reservation" representedClassName="Reservation" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="guest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Gues" inverseName="reservation" inverseEntity="Gues" syncable="YES"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="reservation" inverseEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES">
+        <attribute name="beds" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="hotel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hotel" inverseName="rooms" inverseEntity="Hotel" syncable="YES"/>
+        <relationship name="reservation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="room" inverseEntity="Reservation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Gues" positionX="-72" positionY="-40" width="128" height="73"/>
+        <element name="Hotel" positionX="-614" positionY="-130" width="128" height="103"/>
+        <element name="Reservation" positionX="-36" positionY="-346" width="128" height="103"/>
+        <element name="Room" positionX="-261" positionY="-43" width="128" height="118"/>
+    </elements>
+</model>
