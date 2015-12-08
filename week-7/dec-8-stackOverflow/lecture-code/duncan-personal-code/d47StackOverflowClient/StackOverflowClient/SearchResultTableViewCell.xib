@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="47" id="KGk-i7-Jjw" customClass="SearchResultTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="burger.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ntq-tR-eY6">
+                        <rect key="frame" x="18" y="8" width="30" height="30"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Dkz-Pm-wjS"/>
+                            <constraint firstAttribute="width" constant="30" id="npX-VV-qGN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-PJ-Tym">
+                        <rect key="frame" x="56" y="8" width="51" height="12"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="244" verticalHuggingPriority="247" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzO-H1-DlI">
+                        <rect key="frame" x="56" y="18" width="266" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.51049315025334896" green="0.98359179907818783" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Ntq-tR-eY6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3R6-hu-XP1"/>
+                    <constraint firstItem="Ntq-tR-eY6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="PNZ-xx-Xcz"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ntq-tR-eY6" secondAttribute="bottom" constant="0.5" id="Y1M-a2-kX1"/>
+                    <constraint firstItem="YzO-H1-DlI" firstAttribute="leading" secondItem="Ntq-tR-eY6" secondAttribute="trailing" constant="8" id="fo5-bq-VLa"/>
+                    <constraint firstItem="jhd-PJ-Tym" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="j9s-jJ-V65"/>
+                    <constraint firstItem="jhd-PJ-Tym" firstAttribute="leading" secondItem="Ntq-tR-eY6" secondAttribute="trailing" constant="8" id="lot-1B-hRn"/>
+                    <constraint firstItem="YzO-H1-DlI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="yDt-3O-xP1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="imageView" destination="Ntq-tR-eY6" id="CZT-3S-jNP"/>
+                <outlet property="titleLabel" destination="YzO-H1-DlI" id="meN-Lc-dOC"/>
+                <outlet property="userNameLabel" destination="jhd-PJ-Tym" id="ZZe-HX-NCg"/>
+            </connections>
+            <point key="canvasLocation" x="372" y="315.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="burger.jpeg" width="434" height="288"/>
+    </resources>
+</document>
