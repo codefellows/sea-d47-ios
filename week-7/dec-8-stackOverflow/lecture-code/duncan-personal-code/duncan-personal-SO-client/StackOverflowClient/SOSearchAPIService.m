@@ -46,6 +46,10 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     
     [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary*)parameters withCompletion:^(id _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            completionHandler(nil, error);
+            return ;
+        }
         
         if ([data isKindOfClass:[NSDictionary class]]) {
             completionHandler((NSDictionary * ) data, nil);
@@ -77,6 +81,13 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     
     [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary*)parameters withCompletion:^(id _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            completionHandler(nil, error);
+            return ;
+        }
+        
+        
+        
         if ([data isKindOfClass:[NSDictionary class]]) {
             completionHandler((NSDictionary * ) data, nil);
             return;
@@ -85,27 +96,6 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
         NSError *dictionaryError = [NSError errorWithDomain:@"TYPE ERROR: Converting response object to Dictionary" code:-1 userInfo:nil];
         completionHandler(nil, dictionaryError);
     }];
-}
-
-#pragma mark - completion handler conversion helpers
-+(void) dictionaryCompletionHelperWithData:(NSData *)data withError:(NSError *)error withCompetionHandler:(kNSDictionaryCompletionHandler)completionHandler {
-    
-    if (error == nil) {
-        NSDictionary *dictionary = (NSDictionary*) data;
-        completionHandler(dictionary, nil);
-        return;
-    }
-    completionHandler(nil, error);
-}
-
-+(void) arrayCompletionHelperWithData:(NSData *)data withError:(NSError *)error withCompetionHandler:(kNSArrayCompletionHandler)completionHandler {
-    
-    if (error == nil) {
-        NSArray *array = (NSArray*) data;
-        completionHandler(array, nil);
-        return;
-    }
-    completionHandler(nil, error);
 }
 
 
